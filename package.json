@@ -1,0 +1,50 @@
+{
+  "name": "decentralized-voting-dapp",
+  "version": "1.0.0",
+  "description": "A secure decentralized voting application for national elections",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run hardhat:node\" \"npm run react:dev\"",
+    "react:dev": "npm start",
+    "hardhat:node": "npx hardhat node",
+    "hardhat:deploy": "npx hardhat run scripts/deploy.js --network localhost",
+    "hardhat:deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "build": "npm run build",
+    "start": "react-scripts start",
+    "setup-demo": "node scripts/setup-demo.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@openzeppelin/contracts": "^4.9.3",
+    "hardhat": "^2.17.1",
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "react-scripts": "^5.0.1"
+  },
+  "keywords": [
+    "blockchain",
+    "voting",
+    "ethereum",
+    "solidity",
+    "react",
+    "dapp"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
